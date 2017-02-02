@@ -1,4 +1,4 @@
-﻿namespace SLB.View.Login
+﻿namespace SLB.View
 {
     partial class LoginForm
     {
@@ -34,6 +34,7 @@
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.singInButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -42,7 +43,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.welcomeLabel.Location = new System.Drawing.Point(12, 9);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(328, 35);
+            this.welcomeLabel.Size = new System.Drawing.Size(330, 35);
             this.welcomeLabel.TabIndex = 0;
             this.welcomeLabel.Text = "Witamy w systemie obsługi dziennika elektronicznego!";
             this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,7 +72,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginTextBox.Location = new System.Drawing.Point(80, 57);
             this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(260, 20);
+            this.loginTextBox.Size = new System.Drawing.Size(262, 20);
             this.loginTextBox.TabIndex = 3;
             // 
             // passwordTextBox
@@ -80,33 +81,48 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordTextBox.Location = new System.Drawing.Point(80, 96);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(260, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(262, 20);
             this.passwordTextBox.TabIndex = 4;
             // 
             // singInButton
             // 
             this.singInButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.singInButton.Location = new System.Drawing.Point(225, 146);
+            this.singInButton.Location = new System.Drawing.Point(227, 148);
             this.singInButton.Name = "singInButton";
             this.singInButton.Size = new System.Drawing.Size(115, 35);
             this.singInButton.TabIndex = 5;
             this.singInButton.Text = "Zaloguj";
             this.singInButton.UseVisualStyleBackColor = true;
+            this.singInButton.Click += new System.EventHandler(this.singInButton_Click);
+            // 
+            // exitButton
+            // 
+            this.exitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitButton.Location = new System.Drawing.Point(15, 148);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(115, 35);
+            this.exitButton.TabIndex = 6;
+            this.exitButton.Text = "Zakończ";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 192);
+            this.ClientSize = new System.Drawing.Size(354, 194);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.singInButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.loginLabel);
             this.Controls.Add(this.welcomeLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(360, 220);
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Witamy, zaloguj się";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +136,6 @@
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button singInButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }

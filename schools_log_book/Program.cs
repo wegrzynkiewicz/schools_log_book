@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SLB.Domain.Student;
-using SLB.View.Login;
-using SLB.Persistence;
+using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace SLB
 {
@@ -22,20 +21,16 @@ namespace SLB
 
             try
             {
-                Database.Initialize();
-                Database.Connection.Open();
+                SLB.Tool.Database.Initialize();
+                Application.Run(new SLB.View.LoginForm());
             }
-            catch (System.Data.SqlClient.SqlException exception)
+            catch (MySql.Data.MySqlClient.MySqlException exception)
             {
                 MessageBox.Show(
-                    "Przepraszamy, połączenie z bazą danych nie zostało zainicjalizowane, proszę spróbować później",
+                    "Połączenie z bazą danych nie zostało zainicjalizowane: " + exception.Message,
                     "Wystąpił problem"
                 );
-
-                throw exception;
             }
-
-            Application.Run(new LoginForm());
         }
     }
 }

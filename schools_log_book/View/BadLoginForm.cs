@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SLB.View.Login
+namespace SLB.View
 {
-    public partial class LoginForm : Form
+    public partial class BadLoginForm : Form
     {
-        public LoginForm()
+        public BadLoginForm()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
