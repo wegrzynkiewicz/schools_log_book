@@ -1,6 +1,6 @@
 ﻿namespace SLB.View
 {
-    partial class TeacherForm
+    partial class ManageStudentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,73 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.logoutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.userNameLabel = new System.Windows.Forms.Label();
+            this.studentLabel = new System.Windows.Forms.Label();
             this.grid = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoutButton.Location = new System.Drawing.Point(495, 12);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(75, 23);
-            this.logoutButton.TabIndex = 0;
-            this.logoutButton.Text = "Wyloguj";
-            this.logoutButton.UseVisualStyleBackColor = true;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Witaj nauczycielu: ";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Student: ";
             // 
-            // userNameLabel
+            // studentLabel
             // 
-            this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Location = new System.Drawing.Point(114, 17);
-            this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(84, 13);
-            this.userNameLabel.TabIndex = 2;
-            this.userNameLabel.Text = "(Imie i nazwisko)";
+            this.studentLabel.AutoSize = true;
+            this.studentLabel.Location = new System.Drawing.Point(77, 22);
+            this.studentLabel.Name = "studentLabel";
+            this.studentLabel.Size = new System.Drawing.Size(84, 13);
+            this.studentLabel.TabIndex = 1;
+            this.studentLabel.Text = "(Imię i nazwisko)";
             // 
             // grid
             // 
             this.grid.AllowUserToAddRows = false;
-            this.grid.AllowUserToDeleteRows = false;
-            this.grid.AllowUserToResizeRows = false;
             this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Location = new System.Drawing.Point(11, 41);
+            this.grid.Location = new System.Drawing.Point(12, 51);
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
-            this.grid.Size = new System.Drawing.Size(559, 568);
-            this.grid.TabIndex = 3;
-            this.grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellClick);
+            this.grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.grid.Size = new System.Drawing.Size(825, 687);
+            this.grid.TabIndex = 2;
             // 
-            // TeacherForm
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(707, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 33);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Wystaw nową ocenę";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ManageStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 621);
+            this.ClientSize = new System.Drawing.Size(849, 750);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.grid);
-            this.Controls.Add(this.userNameLabel);
+            this.Controls.Add(this.studentLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.logoutButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "TeacherForm";
+            this.Name = "ManageStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Twoja lista uczniów";
-            this.Load += new System.EventHandler(this.TeacherForm_Load);
+            this.Text = "Oceny ucznia";
+            this.Load += new System.EventHandler(this.ManageStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,9 +100,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label userNameLabel;
+        private System.Windows.Forms.Label studentLabel;
         private System.Windows.Forms.DataGridView grid;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace SLB.Domain
 {
-    class User
+    internal class User
     {
+        public User()
+        {
+
+        }
+
+        public string Id { get; private set; }
         public string Name { get; private set; }
         public string Type { get; private set; }
 

@@ -18,6 +18,8 @@ namespace SLB.View
         }
         private void ContentFormClosed(Object sender, FormClosedEventArgs e)
         {
+            this.loginTextBox.Text = "";
+            this.passwordTextBox.Text = "";
             this.Show();
         }
 
@@ -34,7 +36,7 @@ namespace SLB.View
 
                 if (user.Type == "teacher")
                 {
-                    form = new SLB.View.TeacherForm();
+                    form = new SLB.View.TeacherForm(user.Name);
                 }
                 else if (user.Type == "student")
                 {
@@ -58,6 +60,11 @@ namespace SLB.View
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.singInButton.Focus();
         }
     }
 }
